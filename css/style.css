@@ -1,11 +1,58 @@
-body {
-  font-family: "Fira Sans", sans-serif;
-  display: block;
-  margin: 0 auto;
-  width: 65%;
-  padding: 2rem 0;
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+p,li{
+  font-size: 1rem;
+  line-height: 150%;
 }
 
+a{
+  text-decoration: none;
+  font-weight: medium;
+  color: #282F3C;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #FFFCF1;
+}
+.flip{
+  transform: scaleX(-1);
+}
+.nav{
+  position: sticky;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #282F3C;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap:1rem;
+}
+.hero-svgs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:3rem;
+  margin-bottom: 2rem;
+}
 h1,
 h2,
 h3,
@@ -20,34 +67,73 @@ h6 {
 h1 {
   font-size: clamp(2.5rem, 2rem + 1vw, 4.4rem);
 }
-.subtitle {
-  font-size: 1.5rem;
-}
 
-p,
-il,
-b {
-  line-height: 150%;
-  font-weight: 400;
-  text-wrap: pretty;
+h2{
+  font-size: clamp(1.5rem, 1.75rem + 1vw, 2.5rem);
+}
+.subtitle {
+  font-size: clamp(.5rem, 1.25rem, 1.5rem);
+  max-width: 85%;
+}
+.cta{
+  padding: 12px 24px;
+  background-color: #FFEF54;
+  border: 1px solid #282F3C;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 700;
   font-size: 1rem;
 }
 
 b {
+  font-size: inherit;
   font-weight: 700;
 }
 
-.homepage.hero {
-  display: flexbox;
+.hero {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
   width: 100%;
   height: 75vh;
 }
+.hero-text{
+  gap: .5rem;
+  text-align: center;
+  display: inherit;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  flex-direction: inherit;
+}
 
-.homepage.section {
+.details {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
+  color:#FFFCF1;
+  background-color: #282F3C;
+  padding: 3rem;
+}
+.list-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap:15px;
+}
+.split-list{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex:1 1 50%;
+
+}
+.split-image{
+  max-width: 45%;
+  border-radius: 1rem;
 }
